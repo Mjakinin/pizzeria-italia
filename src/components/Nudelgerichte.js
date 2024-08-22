@@ -19,13 +19,13 @@ function Menu() {
                 <div className='menu-section'>
                     {pastas.map((pasta, index) => (
                         <motion.div
-                            key={index}
-                            className='box'
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, ease: 'easeOut' }}
-                            viewport={{ once: true }} // Animation nur einmal beim ersten Sichtbarwerden
-                        >
+                        key={index}
+                        className='box'
+                        initial={{ opacity: 0, translateY: 50 }}  // Nutzung von translateY statt y
+                        whileInView={{ opacity: 1, translateY: 0 }}
+                        transition={{ duration: 0.5, ease: 'easeOut' }}  // Kürzere Dauer für bessere Performance
+                        viewport={{ once: true }} // Animation nur einmal beim ersten Sichtbarwerden
+                    >
                             <div className='background'></div>
                             <div className='details'>
                                 <h3 className='name'>{pasta.name}</h3>

@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import Header from './Header';
-import Startseite from './Startseite';
-import Pizzen from './Pizzen';
-import Nudelgerichte from './Nudelgerichte';
-import Salate from './Salate';
-import Getränke from './Getränke';
 import Footer from './Footer';
 import '../styles/App.css';
+
+const Startseite = lazy(() => import('./Startseite'));
+const Pizzen = lazy(() => import('./Pizzen'));
+const Nudelgerichte = lazy(() => import('./Nudelgerichte'));
+const Salate = lazy(() => import('./Salate'));
+const Getränke = lazy(() => import('./Getränke'));
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -93,7 +94,9 @@ function App() {
         <div className="App">
           <Header />
           <main>
-            <AnimatedRoutes />
+            <Suspense fallback={<div>Loading...</div>}>
+              <AnimatedRoutes />
+            </Suspense>
           </main>
           <Footer />
         </div>

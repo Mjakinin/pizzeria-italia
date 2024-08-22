@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Header.css'; // Import der spezifischen CSS für den Header
 
-function Header() {
+// Header-Komponente definieren und memoisieren
+const Header = () => {
     return (
         <header>
             <div className="header-container">
-                
-            <Link to="/" className="Logo">
+                <Link to="/" className="Logo">
                     <h1>Pizzeria Italia</h1>
                 </Link>
                 <ul className="nav-links">
@@ -19,8 +19,8 @@ function Header() {
                 </ul>
             </div>
         </header>
-
     );
-}
+};
 
-export default Header;
+// Verwende React.memo, um die Komponente zu optimieren
+export default React.memo(Header);
