@@ -9,7 +9,6 @@ import Salate from './Salate';
 import Getränke from './Getränke';
 import Footer from './Footer';
 import '../styles/App.css'; // Import der globalen CSS-Stile
-import useScrollToTop from '../hooks/useScrollToTop'; // Import des benutzerdefinierten Hooks
 
 function AnimatedRoutes() {
   const location = useLocation();
