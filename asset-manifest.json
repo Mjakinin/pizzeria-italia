@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/pizzeria-react/static/css/main.7397c143.css",
+    "main.js": "/pizzeria-react/static/js/main.6e20e416.js",
+    "static/js/453.b15560b8.chunk.js": "/pizzeria-react/static/js/453.b15560b8.chunk.js",
+    "static/media/pizza.jpg": "/pizzeria-react/static/media/pizza.e7dedb9032a24941feed.jpg",
+    "static/media/Getränke.jpg": "/pizzeria-react/static/media/Getränke.a6a2f13669e10ad18c80.jpg",
+    "static/media/salate.jpg": "/pizzeria-react/static/media/salate.662d824b1ec0b40877fb.jpg",
+    "static/media/pasta.jpg": "/pizzeria-react/static/media/pasta.7b573466d29c3cf6e1f5.jpg",
+    "static/media/UVNKeChuyen1.TTF": "/pizzeria-react/static/media/UVNKeChuyen1.d4bae7911af7f5378d73.TTF",
+    "index.html": "/pizzeria-react/index.html",
+    "main.7397c143.css.map": "/pizzeria-react/static/css/main.7397c143.css.map",
+    "main.6e20e416.js.map": "/pizzeria-react/static/js/main.6e20e416.js.map",
+    "453.b15560b8.chunk.js.map": "/pizzeria-react/static/js/453.b15560b8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7397c143.css",
+    "static/js/main.6e20e416.js"
+  ]
+}
