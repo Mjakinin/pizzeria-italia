@@ -1,0 +1,20 @@
+/* Footer.css */
+
+.footer {
+    background-color: #000000; /* Dunkelgrauer Hintergrund */
+    color: #fff; /* Weiße Schriftfarbe */
+    text-align: center; /* Zentriert den Text */
+    padding: 1px 0; /* Oben und unten 10px Abstand */
+    width: 100%; /* Breite auf 100% setzen */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Leichter Schatten nach oben */
+    position: relative; /* Position relativ für das Layout */
+    font-size: 1.5rem;
+    transform: translateY(25px);
+}
+  
+
+@media (max-width: 541px) {
+    .footer {
+        margin-top: 100px;
+    }
+}

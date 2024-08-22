@@ -1,0 +1,154 @@
+header {
+  background-color: #1b1b1b;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  overflow: hidden;
+  height: auto;
+  top: 0; /* Sicherstellen, dass der Header oben bleibt */
+  left: 0; /* Sicherstellen, dass der Header die volle Breite einnimmt */
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between; /* Verteilt die Elemente gleichmäßig, Logo links, Links rechts */
+  align-items: center; /* Zentriert die Items vertikal */
+  width: 100%;
+}
+
+.Logo {
+  text-decoration: none; /* Entfernt die Unterstreichung des Links */
+  color: inherit; /* Erbt die Textfarbe vom umgebenden Kontext */
+  transition: transform 0.3s ease; /* Smooth Transition für den Zoom-Effekt */
+}
+
+.Logo h1 {
+  font-size: 5em; /* Standard-Schriftgröße für große Bildschirme */
+  color: #c72418;
+  font-weight: 600;
+  margin: 0;
+  margin-left: 100px; /* Abstand zum linken Rand */
+  transition: transform 0.3s ease; /* Smooth Transition für den Zoom-Effekt */
+}
+
+.Logo:hover h1 {
+  transform: scale(1.1); /* Zoom-Effekt beim Hover */
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-right: 100px; /* Abstand zum rechten Rand */
+}
+
+.nav-links li {
+  margin: 0 20px;
+  transition: transform 0.3s ease; /* Smooth Transition für den Zoom-Effekt */
+}
+
+.nav-links li:hover {
+  transform: scale(1.1); /* Zoom-Effekt beim Hover */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #e2e5ec;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.nav-links a:hover {
+  color: #c72418;
+  text-decoration: none; /* Kein Unterstrich beim Hover */
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* Positioniere die Linie in der Mitte */
+  width: 80%; /* Reduziere die Breite */
+  height: 6px;
+  background: linear-gradient(to right, #008c8c 33.33%, #ffffff 33.33% 66.66%, #d52b1e 66.66%);
+  transform: translateX(-50%); /* Verschiebe die Linie zurück, damit sie mittig bleibt */
+  z-index: 1;
+  margin: 0;
+  border-radius: 100%;
+}
+
+/* Media Query für Fenstergrößen kleiner als 1416px */
+@media (max-width: 1515px) {
+  .header-container {
+    flex-direction: column; /* Stellt die Items untereinander */
+    align-items: center; /* Zentriert die Items horizontal */
+    text-align: center; /* Zentriert den Inhalt */
+  }
+
+  .Logo {
+    text-align: center;
+    margin-left: 0; /* Entfernt den linken Randabstand */
+  }
+
+  .Logo h1 {
+    font-size: 3em; /* Kleinere Schriftgröße für kleinere Bildschirme */
+    margin-left: 0; /* Entfernt den linken Randabstand */
+  }
+
+  .nav-links {
+    margin-right: 0; /* Entfernt den rechten Randabstand */
+    margin-top: 10px; /* Fügt etwas Abstand zwischen Logo und Links hinzu */
+    width: 100%;
+    justify-content: center; /* Zentriert die Links horizontal */
+  }
+
+  .nav-links li {
+    margin: 10px 10px;
+  }
+
+  .nav-links a {
+    font-size: 2rem; /* Kleinere Schriftgröße für kleinere Bildschirme */
+  }
+}
+
+/* Media Query für Fenstergrößen kleiner als 540px */
+@media (max-width: 540px) {
+  .header-container {
+    flex-direction: column; /* Stellt die Items untereinander */
+    align-items: center; /* Zentriert die Items horizontal */
+    text-align: center; /* Zentriert den Inhalt */
+  }
+
+  .Logo h1 {
+    font-size: 2em; /* Noch kleinere Schriftgröße für sehr kleine Bildschirme */
+    margin-left: 0; /* Entfernt den linken Randabstand */
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Zentriert die Links horizontal */
+    gap: 10px; /* Abstand zwischen den Items */
+    margin: 0; /* Entfernt den Margin */
+    padding: 0; /* Entfernt das Padding */
+    width: 100%; /* Stellt sicher, dass die Navigation die volle Breite einnimmt */
+  }
+
+  .nav-links li {
+    flex: 1 30%; /* Flex Basis auf 30% setzen, damit bis zu drei Links nebeneinander passen */
+    text-align: center; /* Zentriert den Text in jedem Link */
+    margin: 10px 0; /* Vertikaler Abstand zwischen den Zeilen */
+  }
+
+  .nav-links li:nth-child(4),
+  .nav-links li:nth-child(5) {
+    flex: 1 0 40%; /* Flex Basis auf 45% setzen, damit zwei Links nebeneinander passen */
+  }
+
+  .nav-links a {
+    font-size: 1.5rem; /* Kleinere Schriftgröße für sehr kleine Bildschirme */
+    display: block; /* Macht den Link zu einem Block-Element */
+  }
+}

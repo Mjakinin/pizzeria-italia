@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Calligri';
+  src: url('./assets/fonts/UVNKeChuyen1.TTF') format('truetype');
+  font-style: italic;
+}
+
+body {
+  margin: 0;
+  font-family: 'Calligri', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+

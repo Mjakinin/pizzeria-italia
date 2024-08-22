@@ -1,0 +1,186 @@
+/* Allgemeine Einstellungen */
+.home {
+  color: black;
+  box-sizing: border-box;
+  transform: translateY(110px); /* Verschiebe die Linie zurück, damit sie mittig bleibt */
+}
+
+.elfsight-app-436332db-b884-4b3d-9acf-0e4afba1d4e0 {
+  transform: translateY(10px);
+  z-index: -10;
+}
+
+.elfsight-app-6c2e592c-cb9a-4cd9-84b7-5079384b76b2 {
+  transform: translateY(-30px);
+}
+
+/* Hero-Sektion */
+.hero-home {
+  position: relative;
+  height: 400px; /* Beispielhöhe, sicherstellen, dass sie korrekt ist */
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.hero-home img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text-home {
+  position: absolute;
+  color: #e2e5ec;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+  transition: transform 0.3s ease; /* Smooth Transition für den Zoom-Effekt */
+}
+
+.hero-text-home:hover {
+  transform: translate(-50%, -50%) scale(1.1); /* Zentrieren + Zoom-Effekt beim Hover */
+}
+
+.hero-text-home h1 {
+  font-size: 3em;
+  margin: 0;
+  text-align: center;
+}
+
+.hero-text-home p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+/* Sektionen */
+.section {
+  display: flex;
+  align-items: center;
+  background-color: #e2e5ec;
+  margin-bottom: 20px; /* Gemeinsames Margin-Bottom für alle Sektionen */
+  flex-direction: row; /* Standardlayout: Bild und Text nebeneinander */
+}
+
+/* Allgemeine Stile für Texte in Sektionen */
+.text-section {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease; /* Smooth Transition für den Zoom-Effekt */
+}
+
+.text-section:hover {
+  transform: scale(1.1); /* Zoom-Effekt beim Hover */
+}
+
+/* Stile für Überschriften und Absätze */
+.text-section h2 {
+  font-size: 3em;
+  margin-top: 0;
+}
+
+.text-section p {
+  font-size: 1.1em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* About Us-Sektion */
+.about-us {
+  text-align: center;
+}
+
+.about-us .image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease; /* Smooth Transition für den Zoom-Effekt */
+}
+
+.about-us .image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-us .image-section img {
+  width: auto;
+  height: auto;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Kontakt-Sektion */
+.contact .text-section {
+  text-align: left;
+  margin-left: 2%;
+}
+
+.contact .image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact .image-section img {
+  width: auto;
+  height: auto;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1480px) {
+  .contact .text-section {
+    text-align: left;
+    margin-left: 0%;
+  }
+}
+
+/* Mobile Anpassungen */
+@media (max-width: 1460px) {
+  .section {
+    flex-direction: column; /* Layout für mobile Geräte: Text und Bild untereinander */
+  }
+
+  .contact .text-section {
+    margin-left: 0;
+    order: 1; /* Text wird zuerst angezeigt */
+  }
+
+  .contact .text-section h2 {
+    text-align: center;
+  }
+  
+  .contact .text-section p {
+    text-align: left;
+  }
+
+  .contact .image-section {
+    order: 2; /* Bild wird danach angezeigt */
+  }
+
+  .about-us .image-section img,
+  .contact .image-section img {
+    height: auto;
+    width: 100%;
+  }
+
+  .hero-text-home {
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .hero-text-home h1 {
+    font-size: 2em;
+  }
+
+  .hero-text-home p {
+    font-size: 1.2em;
+  }
+}
