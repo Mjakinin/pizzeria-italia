@@ -8,7 +8,7 @@ import Nudelgerichte from './Nudelgerichte';
 import Salate from './Salate';
 import Getränke from './Getränke';
 import Footer from './Footer';
-import '../styles/App.css'; // Import der globalen CSS-Stile
+import '../styles/App.css';
 
 function AnimatedRoutes() {
   const location = useLocation();
